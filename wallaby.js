@@ -13,7 +13,12 @@ module.exports = wallaby => {
     },
 
     env: {
-      kind: 'electron'
+      kind: 'electron',
+      options: {
+        webPreferences: {
+          nodeIntegration: true
+        }
+      }
     },
 
     testFramework: 'jasmine',
